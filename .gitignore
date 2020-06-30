@@ -5274,3 +5274,5 @@ nodejs/public/.DS_Store
 package-lock.json
 default-us-icr-io.yaml
 key_file.json
+create-pipeline.bat
+.project

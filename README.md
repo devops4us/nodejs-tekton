@@ -35,10 +35,10 @@ It should take you approximately 1 hour to provision the OpenShift / K8s cluster
 
 ## Steps
 
-1. [Create a cloud-native CI/CD pipeline on OpenShift 4.3](#create-a-cloud-native-cicd-pipeline-on-openshift-43)
+1. [Create a cloud-native CI/CD pipeline on OpenShift 4.3]
 
-2. [Create a cloud-native CI/CD pipeline on Kubernetes 1.17+](#create-a-cloud-native-cicd-pipeline-on-kubernetes-117)
-3. [Create a webhook connection from Git to a Tekton CI/CD pipeline](#create-a-webhook-connection-from-git-to-a-tekton-cicd-pipeline)
+2. [Create a cloud-native CI/CD pipeline on Kubernetes 1.17+]
+3. [Create a webhook connection from Git to a Tekton CI/CD pipeline]
 
 Before you get started, it’s important to understand how the application image is built. Using Tekton Pipelines involves building the application image inside the OpenShift/Kubernetes cluster. When using OpenShift, you use the standard [S2I Build task](https://github.com/openshift/pipelines-catalog) and for Kubernetes you use the [Kaniko Build task](https://github.com/tektoncd/catalog/tree/master/kaniko). 
 

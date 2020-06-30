@@ -46,29 +46,29 @@ spec:
           - name: source
             resource: nodejs-git
 
-    - name: test
-      taskRef:
-        name: test-nodejs-app
-      runAfter:
-        - deploy
-      params:
-        - name: DEPLOY_ENVIRONMENT
-          value: "$(params.DEPLOY_ENVIRONMENT)"
-
-    - name: promote
-      taskRef:
-        name: promote-nodejs-app
-      runAfter:
-        - test
-      params:
-        - name: PROMOTE_ENVIRONMENT
-          value: "$(params.PROMOTE_ENVIRONMENT)"
-      resources:
-        inputs:
-          - name: source
-            resource: nodejs-git
-          - name: image
-            resource: nodejs-image-dev
-        outputs:
-          - name: image
-            resource: nodejs-image-stage
+#    - name: test
+#      taskRef:
+#        name: test-nodejs-app
+#      runAfter:
+#        - deploy
+#      params:
+#        - name: DEPLOY_ENVIRONMENT
+#          value: "$(params.DEPLOY_ENVIRONMENT)"
+#
+#    - name: promote
+#      taskRef:
+#        name: promote-nodejs-app
+#      runAfter:
+#        - test
+#      params:
+#        - name: PROMOTE_ENVIRONMENT
+#          value: "$(params.PROMOTE_ENVIRONMENT)"
+#      resources:
+#        inputs:
+#          - name: source
+#            resource: nodejs-git
+#          - name: image
+#            resource: nodejs-image-dev
+#        outputs:
+#          - name: image
+#            resource: nodejs-image-stage
